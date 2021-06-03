@@ -69,6 +69,7 @@ database.json
 
 node_modules
 bower_components
+package-lock.json
 
 
 

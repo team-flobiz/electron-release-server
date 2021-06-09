@@ -510,7 +510,7 @@ module.exports = {
           );
 
           const sha512 = asset.hash ? asset.hash : null;
-          const notes = latestVersion.notes.replace(/\n/g, "  \n");
+          const notes = latestVersion.notes.replace(/\n/g, "\n  ");
           var latestYml = `
 version: ${latestVersion.name}
 files:

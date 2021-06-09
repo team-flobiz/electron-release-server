@@ -523,8 +523,8 @@ sha512: ${sha512}
 size: ${asset.size}
 hardUpdate: true
 notes: http://34.93.91.185/notes/${latestVersion.name}/${flavor}
-releaseNotes:
-  - ${notes}`;
+releaseNotes: >
+  ${latestVersion.notes}`;
 
           res.ok(latestYml);
         } else {

@@ -510,7 +510,7 @@ module.exports = {
           );
 
           const sha512 = asset.hash ? asset.hash : null;
-          const notes = latestVersion.notes.split("\n").join("\n  - ");
+          const notes = latestVersion.notes.replace(/\n/g, "  \n");
           var latestYml = `
 version: ${latestVersion.name}
 files:
@@ -523,8 +523,8 @@ sha512: ${sha512}
 size: ${asset.size}
 hardUpdate: true
 notes: http://34.93.91.185/notes/${latestVersion.name}/${flavor}
-releaseNotes: >
-  ${latestVersion.notes}`;
+releaseNotes: |
+  ${notes}`;
 
           res.ok(latestYml);
         } else {

@@ -511,17 +511,18 @@ module.exports = {
 
           const sha512 = asset.hash ? asset.hash : null;
 
-          var latestYml = `version: ${latestVersion.name}
-          files:
-            - url: ${downloadPath}
-              sha512: ${sha512}
-              size: ${asset.size}
-          releaseDate: ${latestVersion.updatedAt}
-          path: ${downloadPath}
-          sha512: ${sha512}
-          size: ${asset.size}
-          hardUpdate: true
-          notes: ${latestVersion.notes}`;
+          var latestYml = `
+version: ${latestVersion.name}
+files:
+  - url: ${downloadPath}
+    sha512: ${sha512}
+    size: ${asset.size}
+releaseDate: ${latestVersion.updatedAt}
+path: ${downloadPath}
+sha512: ${sha512}
+size: ${asset.size}
+hardUpdate: true
+notes: ${latestVersion.notes}`;
 
           res.ok(latestYml);
         } else {

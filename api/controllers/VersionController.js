@@ -522,7 +522,7 @@ path: ${downloadPath}
 sha512: ${sha512}
 size: ${asset.size}
 hardUpdate: true
-notes: ${latestVersion.notes}`;
+notes: http://34.93.91.185/notes/${latestVersion.name}/${flavor}`;
 
           res.ok(latestYml);
         } else {

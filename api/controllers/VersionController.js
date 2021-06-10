@@ -522,6 +522,7 @@ path: ${downloadPath}
 sha512: ${sha512}
 size: ${asset.size}
 hardUpdate: true
+stagingPercentage: 100
 notes: http://34.93.91.185/notes/${latestVersion.name}/${flavor}
 releaseNotes: |
   ${notes}`;

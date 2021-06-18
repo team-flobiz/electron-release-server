@@ -97,7 +97,6 @@ module.exports = {
             // thus it has newer `createdAt`.
             versions = versions.sort(UtilityService.compareVersion);
             var version = versions[0];
-            var version;
             for (var i = 0; i < versions.length; i++) {
               version = versions[i];
               if (version.assets && version.assets.length) {

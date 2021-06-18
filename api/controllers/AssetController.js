@@ -114,7 +114,7 @@ module.exports = {
               _.orderBy(
                 version.assets,
                 ["filetype", "createdAt"],
-                ["asc", "desc"]
+                ["desc", "desc"]
               )[0]
             );
           })
